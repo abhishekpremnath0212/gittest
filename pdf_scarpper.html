@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Converter</title>
+</head>
+<body>
+    <h1>File Converter</h1>
+    
+    <!-- File Upload Form -->
+    <form id="fileUploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" accept=".pdf, .jpg, .jpeg, .png">
+        <button type="button" id="convertButton">Convert</button>
+    </form>
+
+    <!-- Download Button (hidden initially) -->
+    <a id="downloadLink" style="display: none" download="converted.csv">
+        <button id="downloadButton" style="display: none">Download CSV</button>
+    </a>
+
+    <!-- JavaScript to handle file upload and download -->
+    <script>
+        document.getElementById('convertButton').addEventListener('click', function () {
+            // You can add file conversion logic here
+            // After conversion, show the download button
+            document.getElementById('downloadLink').style.display = 'block';
+            document.getElementById('downloadButton').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
